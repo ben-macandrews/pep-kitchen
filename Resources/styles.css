@@ -52,6 +52,7 @@ table {
     font-family: Lucifer;
     src: url("./Lucifer\ Sans\ Medium.otf") format("opentype");
 }
+
 h1 {
     font-family: 'Lucifer', sans-serif;
     font-style: normal;
@@ -62,7 +63,7 @@ h1 {
     color: #383F51;
 }
 p {
-    font-family: 'Century Gothic Pro';
+    font-family: 'Didact Gothic', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -83,28 +84,32 @@ p.ben-and-joe {
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(12, 80px);
+    grid-template-columns: repeat(6, 80px);
     grid-column-gap: 20px;
     justify-items: center;
     justify-content: center;
 }
+
 .flex-container {
-    grid-column-start: 4;
+    grid-column-start: 0;
     grid-column-end: span 6;    
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 28px 0px 0px;
 }
+
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 16px;
 }
-
+.hero-image {
+    width: 100%;
+}
 .contact {
-    grid-column-start: 4;
+    grid-column-start: 0;
     grid-column-end: span 6;
     display: flex;
     flex-direction: row;
@@ -113,6 +118,7 @@ p.ben-and-joe {
     padding: 0px; 
     margin-top: 16px;  
 }
+
 .email {
     display: flex;
     flex-direction: row;
@@ -149,4 +155,66 @@ body {
     border: 15px solid #ED6E6C;
     box-sizing: border-box;
     padding-bottom: 50px;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    body {
+        background: #FFFFFF;
+        border: 10px solid #ED6E6C;
+        box-sizing: border-box;
+        padding-bottom: 50px;
+    }
+    h1 {
+        font-family: 'Lucifer', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        color: #383F51;
+    }
+    .main-logo {
+        display: block;
+        margin: 0, auto, 16px;
+        max-width: 80px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        grid-column-gap: 20px;
+        justify-items: center;
+        justify-content: center;
+    }
+    .flex-container {
+        grid-column-start: 0;
+        grid-column-end: span 3;    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 28px 0px 0px;
+    }
+    .flex-container {
+        grid-column-start: 0;
+        grid-column-end: span 3;    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 28px 0px 0px;
+    }
+    .contact {
+        grid-column-start: 0;
+        grid-column-end: span 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px; 
+        margin-top: 16px; 
+    }
+    .instagram {
+        margin-top: 8px;
+    }
 }
