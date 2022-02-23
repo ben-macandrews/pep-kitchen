@@ -73,14 +73,13 @@ p {
     color: #383F51;
 }
 p.ben-and-joe {
-    font-weight: bold;
+    font-weight: bold;`
 }
 
 /* Page Structure */
 
 .main-logo {
     display: block;
-    margin: 0, auto, 16px;
 }
 .grid {
     display: grid;
@@ -96,7 +95,7 @@ p.ben-and-joe {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 28px 0px 0px;
+    padding: 16px 0px 0px;
 }
 
 .main {
@@ -125,9 +124,9 @@ p.ben-and-joe {
     align-items: center;
     padding: 0px;
 }
-.email * {
+.email img, .email p {
     display: inline-block;
-    margin: 0px 8px;
+    margin: 0px 8px 0 0;
 }
 
 
@@ -136,16 +135,34 @@ p.ben-and-joe {
     flex-direction: row;
     align-items: center;
     padding: 0px;
+    margin-left: 8px;
 }
-.instagram * {
+.instagram img, .instagram p {
     display: inline-block;
-    margin: 0px 8px;
+    margin: 0px 8px 0 0;
 }
 
 
 .signature img {
     display: block;
     margin: auto;
+}
+
+/* Gallery */
+
+.gallery {
+    grid-column-start: 0;
+    grid-column-end: span 6;    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0px 0px;
+}
+.gallery img {
+    width: 180px;
+    margin-bottom: 20px;
 }
 
 /* Page Border */
@@ -171,7 +188,7 @@ body {
         font-family: 'Lucifer', sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.5;
         text-align: center;
         color: #383F51;
@@ -217,4 +234,19 @@ body {
     .instagram {
         margin-top: 8px;
     }
+    .gallery {
+        grid-column-start: 0;
+        grid-column-end: span 3;    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 32px 0px 0px;
+    }
+    .gallery img {
+        width: 280px;
+        margin-bottom: 20px;
+    }
+    
 }
